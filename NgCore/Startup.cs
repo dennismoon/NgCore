@@ -63,6 +63,11 @@ namespace NgCore
                 app.UseStatusCodePages();
             }
 
+            // This middleware allows to serve default files. 
+            // This will search the wwwroot folder for following files.
+            // index.html, index.htm, default.html, default.htm
+            app.UseDefaultFiles();
+
             // Support loading static files
             app.UseStaticFiles();
 
